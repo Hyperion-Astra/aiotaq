@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -24,8 +27,17 @@ const HeroSection = () => {
     e.target.classList.add("active");
   };
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="hero-section">
+      {/* Navbar */}
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-logo">Aiotaq</div>
         <button
@@ -35,12 +47,31 @@ const HeroSection = () => {
           &#9776;
         </button>
         <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
-          <li><a href="#services" onClick={handleNavItemClick}>Services</a></li>
-          <li><a href="#it-department" onClick={handleNavItemClick}>IT Department</a></li>
-          <li><a href="#skills" onClick={handleNavItemClick}>Skills</a></li>
-          <li><a href="#portfolio" onClick={handleNavItemClick}>Portfolio</a></li>
-          <li><a href="#resources" onClick={handleNavItemClick}>Resources</a></li>
-          <li><a href="#contact" onClick={handleNavItemClick}>Contact</a></li>
+          <li>
+            <a href="#services" onClick={handleNavItemClick}>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#it-department" onClick={handleNavItemClick}>
+              Outsourcing
+            </a>
+          </li>
+          <li>
+            <a href="#skills" onClick={handleNavItemClick}>
+              Technologies
+            </a>
+          </li>
+          <li>
+            <a href="#resources" onClick={handleNavItemClick}>
+              Resources
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={handleNavItemClick}>
+              Contact
+            </a>
+          </li>
         </ul>
         <div className="navbar-social-icons">
           <a href="#" className="social-icon" title="Facebook">
@@ -55,16 +86,36 @@ const HeroSection = () => {
         </div>
       </nav>
 
-      <header className="hero-header">
-        <h1>We Build Software That Exceed Your Expectations</h1>
-        <p>
-          With Over 9 years Experience in Software Development, <strong>Aiotaq Integrated</strong> has built, and is still building, powerful Software Solutions On Web Applications, Mobile Applications, and Telecom Applications.
-        </p>
-        <div className="hero-buttons">
-          <button className="btn btn-primary">View Portfolio</button>
-          <button className="btn btn-secondary">Request a Quote</button>
+      {/* Hero Slider */}
+      <Slider {...sliderSettings} className="hero-slider">
+        {/* Page 1 */}
+        <div className="slider-page">
+          <header className="hero-header">
+            <h1>SOFTWARE DESIGN WITH YOU IN MIND</h1>
+            <p>
+              We develop top-notch solutions that help grow your business and accelerate returns on investment. We
+              follow <strong>next-generation</strong> approaches in software development to develop solutions that
+              will give you a competitive edge.
+            </p>
+            <div className="hero-buttons">
+              <button className="btn btn-primary">Explore Services</button>
+            </div>
+          </header>
         </div>
-      </header>
+
+        {/* Page 2 */}
+        <div className="slider-page">
+          <header className="hero-header">
+            <h1>POWER YOUR BUSINESS</h1>
+            <p>
+            Ready to transfer your strategies into a business process? Get<strong> Real Expertise</strong> from us. We help you ensure that every penny you spend leads to increased business performance.
+            </p>
+            <div className="hero-buttons">
+              <button className="btn btn-primary">Explore Services</button>
+            </div>
+          </header>
+        </div>
+      </Slider>
     </div>
   );
 };

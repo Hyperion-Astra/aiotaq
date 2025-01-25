@@ -13,9 +13,10 @@ body {
   .navbar {
     position: fixed;
     top: 0;
+    margin-top: 10px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
     background: transparent;
@@ -44,7 +45,7 @@ body {
   
   .navbar-menu li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
@@ -88,9 +89,10 @@ body {
   
   /* Hero Section Styles */
   .hero-header {
-    background: url('aiotaq/public/Wallpaper.jpg') no-repeat center center/cover;
+    background: url('../assets/Wallpaper.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
+    height: 50vh;
     text-align: center;
   }
   
@@ -155,7 +157,7 @@ body {
   
   .navbar-social-icons .social-icon {
     font-size: 16px; /* Adjust icon size */
-    color: #333; /* Default color */
+    color: #ffffff; /* Default color */
     text-decoration: none;
     transition: color 0.3s ease;
     margin-right: 40px;
@@ -164,6 +166,45 @@ body {
   .navbar-social-icons .social-icon:hover {
     color: #007bff; /* Change to your preferred hover color */
   }
+
+  .hero-slider .slider-page {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .hero-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-header p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .hero-buttons .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+  }
+  
   
 
   
