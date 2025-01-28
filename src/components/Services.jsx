@@ -25,7 +25,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="services-section">
+    <div className="services-section" id="services">
       <h2 className="services-title">SERVICES</h2>
       <p className="services-subtitle">
         We offer various services ranging from Web to Mobile Applications Development, IT Outsourcing and IT Consulting Services.
