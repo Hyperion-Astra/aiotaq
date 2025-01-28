@@ -40,7 +40,7 @@ const Skills = () => {
       <div className="skills-content">
         <div className="skills-image">
           <img
-            src="../assets/skill.png"
+            src="../assets/phone.png"
             alt="Showcasing projects on different devices"
           />
         </div>
