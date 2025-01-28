@@ -3,7 +3,7 @@ import "./Contact.css"; // Import the CSS file
 
 const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container">
       {/* Header Section */}
       <h2 className="contact-title">GET IN TOUCH</h2>
       <p className="contact-subtitle">
@@ -21,14 +21,14 @@ const Contact = () => {
           <div className="info-item">
             <span className="icon">&#127968;</span>
             <p>
-              <strong>Address</strong>:J222 Ikota Shopping Complex
-            By VGC Ajah,  Lagos Nigeria.
+              <strong>Address</strong>: 296 Herbert Macaulay Way, Sabo, Yaba,
+              Lagos, Nigeria
             </p>
           </div>
           <div className="info-item">
             <span className="icon">&#128222;</span>
             <p>
-              <strong>Phone</strong>: +234 905834 3900
+              <strong>Phone</strong>: +234 805 8684588 <br />
             </p>
           </div>
           <div className="info-item">
@@ -40,49 +40,37 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-<div className="contact-form">
-  <h3 className="form-title">LEAVE A MESSAGE</h3>
-  <form
-    action="https://formspree.io/f/mqaepnly" // Replace with your Formspree endpoint
-    method="POST"
-  >
-    <input
-      type="text"
-      name="name" // Add a `name` attribute for each input
-      className="form-input"
-      placeholder="Your Full Name"
-      required
-    />
-    <input
-      type="email"
-      name="email"
-      className="form-input"
-      placeholder="contact@email.com"
-      required
-    />
-    <input
-      type="tel"
-      name="phone"
-      className="form-input"
-      placeholder="Your Phone Number"
-    />
-    <textarea
-      name="message"
-      className="form-textarea"
-      placeholder="Your Message"
-      required
-    ></textarea>
-    <button type="submit" className="form-button">
-      SEND QUERIES
-    </button>
-  </form>
-</div>
-
+        <div className="contact-form">
+          <h3 className="form-title">LEAVE A MESSAGE</h3>
+          <form
+          action="https://formspree.io/f/mqaepnly" // Replace with your Formspree endpoint
+          method="POST">
+            <input
+              type="text"
+              className="form-input"
+              placeholder="Your Full Name"
+            />
+            <input
+              type="email"
+              className="form-input"
+              placeholder="contact@email.com"
+            />
+            <input
+              type="tel"
+              className="form-input"
+              placeholder="Your Phone Number"
+            />
+            <textarea
+              className="form-textarea"
+              placeholder="Your Message"
+            ></textarea>
+            <button type="submit" className="form-button">
+              SEND QUERIES
+            </button>
+          </form>
         </div>
-        
-      
+      </div>
     </div>
-    
   );
 };
 

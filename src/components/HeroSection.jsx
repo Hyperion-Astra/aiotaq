@@ -55,7 +55,7 @@ const HeroSection = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="navbar-logo">Datalog</div>
+        <div className="navbar-logo">Datalogsol</div>
         <button
           className="navbar-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
