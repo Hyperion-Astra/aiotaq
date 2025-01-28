@@ -41,7 +41,7 @@ const Skills = () => {
         <div className="skills-image">
           <img
             src="../assets/ku.jpg"
-            alt="Showcasing projects on different devices"
+            alt="Showcasing projects"
           />
         </div>
         <div className="skills-list">
